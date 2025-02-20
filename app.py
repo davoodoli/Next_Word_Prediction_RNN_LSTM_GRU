@@ -64,3 +64,6 @@ model.add(Dense(total_words, activation='softmax'))
 
 # Compile the model
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+## Train the model
+history=model.fit(x_train,y_train,epochs=50,validation_data=(x_test,y_test),verbose=1)
